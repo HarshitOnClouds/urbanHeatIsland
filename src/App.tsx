@@ -2,7 +2,7 @@ import { Thermometer, MapPin, TrendingUp, Satellite, ArrowRight, Leaf, Sun } fro
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden">
+    <div className="min-h-screen bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white overflow-hidden ">
       {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute top-10 sm:top-20 left-5 sm:left-10 w-48 h-48 sm:w-72 sm:h-72 bg-orange-500/10 rounded-full blur-3xl animate-pulse"></div>
@@ -11,7 +11,7 @@ function App() {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 min-h-screen flex flex-col lg:h-screen lg:max-h-screen">
+  <div className="relative z-10 min-h-screen flex flex-col lg:h-screen lg:max-h-screen overflow-hidden">
         {/* Header */}
         <header className="pt-4 sm:pt-6 lg:pt-8 px-4 sm:px-6 md:px-12 flex-shrink-0">
           <div className="flex items-center gap-2 sm:gap-3">
@@ -20,12 +20,23 @@ function App() {
             </div>
             <span className="text-lg sm:text-xl font-semibold tracking-tight">UHI Analytics</span>
           </div>
+          <div className="mt-3 sm:mt-4">
+            <a
+              href="https://harshitgeospatialproject.projects.earthengine.app/view/urban-heat-island"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-2 sm:gap-2.5 px-5 sm:px-6 py-2.5 sm:py-3 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl font-semibold text-sm sm:text-base shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300"
+            >
+              <span>Try It Out</span>
+              <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 hover:translate-x-1 transition-transform" />
+            </a>
+          </div>
         </header>
 
         {/* Main Content */}
-        <main className="flex-1 flex flex-col justify-center px-4 sm:px-6 md:px-12 py-4 sm:py-6 lg:py-8 min-h-0 overflow-hidden">
-          <div className="max-w-6xl w-full mx-auto">
-            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-6 sm:mb-8 lg:mb-12">
+        <main className="flex-1 flex flex-col px-4 sm:px-6 md:px-12 py-4 sm:py-6 lg:py-8 min-h-0 overflow-hidden lg:justify-between">
+          <div className="max-w-6xl w-full mx-auto flex flex-col lg:h-full">
+            <div className="grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-12 items-center mb-6 sm:mb-8 lg:mb-8 flex-1">
               {/* Left Column - Text Content */}
               <div className="space-y-4 sm:space-y-6 lg:space-y-8 order-2 lg:order-1">
                 <div className="space-y-3 sm:space-y-4 lg:space-y-6 text-center lg:text-left">
@@ -154,23 +165,7 @@ function App() {
               </div>
             </div>
 
-            {/* Call-to-Action Section */}
-            <div className="flex flex-col md:flex-row items-center justify-between gap-4 sm:gap-6 pt-4 sm:pt-6 lg:pt-8 border-t border-white/10">
-              <div className="text-xs sm:text-sm text-slate-400 text-center md:text-left">
-                <p>Analyzing urban heat patterns • Sentinel-2 & Landsat-8/9 data</p>
-                <p className="mt-1 hidden sm:block">March-May seasonal analysis • Export capabilities included</p>
-              </div>
-
-              <a
-                href="https://harshitgeospatialproject.projects.earthengine.app/view/urban-heat-island"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group relative px-6 sm:px-8 py-3 sm:py-4 bg-gradient-to-r from-orange-500 to-red-600 rounded-xl font-semibold text-base sm:text-lg shadow-lg shadow-orange-500/25 hover:shadow-xl hover:shadow-orange-500/40 hover:scale-105 transition-all duration-300 flex items-center gap-2 sm:gap-3"
-              >
-                <span>Try It Out</span>
-                <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 group-hover:translate-x-1 transition-transform" />
-              </a>
-            </div>
+            {/* Removed bottom Call-to-Action Section to avoid duplication */}
           </div>
         </main>
 
